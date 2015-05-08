@@ -32,7 +32,7 @@
     <div id="map"></div>
     <div id="overlay">
       <h3>Trackinger</h3>
-      Route url: <input value="http://track.io/gYsaWXa"/></br>
+      Route url: <input value="http://trackinger.me/gYsaWXa"/></br>
       <button>Pause</button>
       <button>End</button>
     </div>
@@ -67,13 +67,16 @@
         'lon': lon
       };
       route.points.push(routePoint);
-      tempMarker = new L.marker([lat, lon]);
+      startMarker = new L.marker([lat, lon]);
+      lastMarker = new L.marker([lat, lon]);
       
       // draw map
       var map = L.map('map').setView([lat, lon], 15);
       L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
         id: 'examples.map-i875mjb7'
       }).addTo(map);
+      
+      map.addLayer(startMarker);
       
       var int = self.setInterval(function(){getLocation()}, 2000);
       function getLocation() {
@@ -112,9 +115,9 @@
         firstpolyline.addTo(map);
         
         marker = new L.marker([lat, lon]);
-        map.removeLayer(tempMarker);
+        map.removeLayer(lastMarker);
         map.addLayer(marker);
-        tempMarker = marker;
+        lastMarker = marker;
         map.panTo(new L.LatLng(lat, lon));
         
         // create route point and add to route
