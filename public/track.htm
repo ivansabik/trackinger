@@ -78,7 +78,7 @@
       
       map.addLayer(startMarker);
       
-      var int = self.setInterval(function(){getLocation()}, 2000);
+      var int = self.setInterval(function(){getLocation()}, 5000);
       function getLocation() {
         navigator.geolocation.getCurrentPosition(showPosition);
       }
