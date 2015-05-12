@@ -1,0 +1,24 @@
+    html,body, #map{
+      height:100%;
+      width: 100%;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+    }
+    #map {
+      z-index: 1;
+    }
+    #overlay {
+      position:absolute;
+      width: 300px;
+      height: 130px;
+      bottom: 32px;
+      left: 32px;
+      background-color:#FFFFCC;
+      z-index: 100;
+      border-radius: 20px;
+    padding-left: 25px;
+    }
+    
+    .trackinger {
+font-family: 'Open Sans', sans-serif;    }
