@@ -17,8 +17,19 @@
       background-color:#FFFFCC;
       z-index: 100;
       border-radius: 20px;
-    padding-left: 25px;
+    padding-left: 10px;
     }
     
     .trackinger {
 font-family: 'Open Sans', sans-serif;    }
+
+.texti {
+text-align: center;
+font-size: 15px;
+font-family: 'Montserrat', sans-serif;
+}
+
+.form-signin-heading {
+text-align: center;
+margin-bottom: 20px;
+}

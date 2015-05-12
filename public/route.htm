@@ -6,7 +6,6 @@
  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <link href="./css/style.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -16,16 +15,16 @@
     <![endif]-->
 	</head>	
 	<body>
-    <div class="container">
-      <form class="form-signin" action="route.htm">
-        <h2 class="form-signin-heading trackinger">trackinger</h2>
-        <p class="texti">Share route with this email address</p>
-        <p><input type="text" class="form-control" autofocus=""></p>
-        <p class="texti">PIN (optional)</p>
-        <p><input type="text" class="form-control"  autofocus=""></p>
-        <button class="btn btn-lg btn-primary btn-block btn-success" type="submit">Start route</button>
-      </form>
+    <div id="map"></div>
+    <div id="overlay">
+      <div class="container-overlay">
+      <h3 class="trackinger">trackinger</h3>
+      <p>Route url: <input value="http://7rack.me/gYsaWXa" class="input-small" size=""/></p>
+      <button button type="button" class="btn btn-warning">Pause</button>
+      <button button type="button" class="btn btn-danger">End</button>
+      </div>
     </div>
+    <script src="./js/leaflet.js"></script>
     <script src="./test/routeRadiatasGlorieta.js"></script>
 		<script src="./app.js"></script>
 	</body>
