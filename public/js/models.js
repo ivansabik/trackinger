@@ -1,11 +1,11 @@
 var Route() {
-  this.id = null;
+  this.id = this._generateId();
   this.status = null;
   this.startedAt = null;
   this.geopoints = [];
   this.getStart() = function() {}
   this.addGeopoint() = function() {}
-  this.getDistance() = function() {]
+  this.getDistance() = function() {}
   this.getTime() = function() {}
   this._generateId() = function() {}
   this.getMapsPolyline() = function() {}
@@ -16,5 +16,5 @@ var Route() {
 var Geopoint() {
   this.lat = null;
   this.lon = null;
-  this.timestamp = null;
+  this.timestamp = new Date().getTime();
 }
