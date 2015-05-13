@@ -1,4 +1,13 @@
-# trackinger
+```
+                         _                         
+   _                    | |   (_)                        
+ _| |_  ____ _____  ____| |  _ _ ____   ____ _____  ____ 
+(_   _)/ ___|____ |/ ___) |_/ ) |  _ \ / _  | ___ |/ ___)
+  | |_| |   / ___ ( (___|  _ (| | | | ( (_| | ____| |    
+   \__)_|   \_____|\____)_| \_)_|_| |_|\___ |_____)_|    
+                                      (_____|            
+```
+=======
 
 Publicly share routes with real time display in a map
 
@@ -9,8 +18,7 @@ Publicly share routes with real time display in a map
 ![Track route](https://raw.githubusercontent.com/ivansabik/trackinger/master/doc/screenshot3.png)
 
 
-### Test route
+### Make test routes
 
-http://mapbox.github.io/togeojson/
-
-http://www.scribblemaps.com/maps/view/radiatas-glorieta/mctVjLsO3L
+- http://mapbox.github.io/togeojson/
+- http://www.scribblemaps.com/maps/view/radiatas-glorieta/mctVjLsO3L

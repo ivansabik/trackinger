@@ -1,0 +1,25 @@
+[
+  Route 
+  |
+    +id;
+    +status;
+    +startedAt;
+    +geopoints
+  |
+    +getStart();
+    +addGeopoint();
+    +getDistance();
+    +getTime();
+    +getMapsPolyline();
+    +getMapsMarkers();
+    +save();
+    +_generateId()
+]
+<>1->*
+[
+  Geopoint 
+  |
+    +lat;
+    +lon;
+    +timestamp
+]
