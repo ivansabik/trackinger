@@ -9,7 +9,17 @@
     #map {
       z-index: 1;
     }
-    #overlay {
+    #overlay-tracked{
+      position:absolute;
+      width: 100%;
+      height: 60px;
+      bottom: 25px;
+      background-color:#FFFFCC;
+      z-index: 100;
+      border-radius: 15px;
+    }
+    
+        #overlay-tracker {
       position:absolute;
       width: 150px;
       height: 60px;
@@ -21,17 +31,17 @@
     padding-left: 10px;
     }
     
-    .trackinger {
+.trackinger {
 font-family: 'Open Sans', sans-serif;    }
 
 .texti {
-text-align: left;
+text-align: center;
 font-size: 12px;
 }
 
-.texti2 {
-text-align: left;
-font-size: 20px;
+.texti-klein{
+text-align: center;
+font-size: 8x;
 }
 
 .form-signin-heading {
@@ -46,6 +56,18 @@ margin-bottom: 20px;
   height: 80px;
   background-color: #FFFFCC;
   z-index: 100;
+      padding-top: 10px;
 }
 
 div.inline { display: inline }
+
+.inline { display: inline }
+
+.centered {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.container.centered {
+  margin-bottom: -10px;
+}
