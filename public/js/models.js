@@ -1,8 +1,9 @@
-var Route() {
+function Route() {
   this.id = this._generateId();
   this.status = null;
   this.startedAt = null;
-  this.geopoints = [];
+  this.geopoint = [];
+  this.shortUrl = null;
   this.getStart() = function() {}
   this.addGeopoint() = function() {}
   this.getDistance() = function() {}
@@ -13,7 +14,7 @@ var Route() {
   this.save() = function() {}
 }
 
-var Geopoint() {
+function Geopoint() {
   this.lat = null;
   this.lon = null;
   this.timestamp = new Date().getTime();
