@@ -7,40 +7,66 @@
   <script src="//code.jquery.com/qunit/qunit-1.18.0.js"></script> 
   <script scr="../js/models.js"
   <script>
-    QUnit.test("initial status is route started", function( assert ) {
-      assert.equal(true, null, "Finish test");
+    QUnit.test('initial status is route started', function( assert ) {
+      route = new Route();
+      assert.equal(route.status, 'started');
     });
     
-    QUnit.test("ID is generated for new route", function( assert ) {
-      assert.equal(true, null, "Finish test");
+    QUnit.test('ID is generated for new route', function( assert ) {
+      route = new Route();
+      assert.equal(route.id, '');
     });
     
-    QUnit.test("short URL is generated for new route", function( assert ) {
-      assert.equal(true, null, "Finish test");
+    QUnit.test('started at is assigned', function( assert ) {
+      route = new Route();
+      assert.equal(route.startedAt, '');
     });
     
-    QUnit.test("started at is assigned", function( assert ) {
-      assert.equal(true, null, "Finish test");
+    QUnit.test('adds Geopoint', function( assert ) {
+      route = new Route();
+      gp = new Geopoint();
+      route.addPoint(gp);
+      assert.equal(route.geopoints[0], '');
     });
     
-    QUnit.test("adds Geopoint", function( assert ) {
-      assert.equal(true, null, "Finish test");
+    QUnit.test('calculates route distance', function( assert ) {
+      route = new Route();
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      assert.equal(route.getDistance(), 0.00);
     });
     
-    QUnit.test("calculates route distance", function( assert ) {
-      assert.equal(true, null, "Finish test");
+    QUnit.test('calculates route time', function( assert ) {
+      route = new Route();
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      assert.equal(route.getTime(), 0.00);
     });
     
-    QUnit.test("calculates route time", function( assert ) {
-      assert.equal(true, null, "Finish test");
+    QUnit.test('generates maps polyline', function( assert ) {
+      route = new Route();
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      assert.equal(route.getMapPolyline(), []);
     });
     
-    QUnit.test("generates maps polyline", function( assert ) {
-      assert.equal(true, null, "Finish test");
-    });
-    
-    QUnit.test("generates maps markers", function( assert ) {
-      assert.equal(true, null, "Finish test");
+    QUnit.test('generates maps markers', function( assert ) {
+      route = new Route();
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      route.addPoint(new Geopoint(0.00, 0.00));
+      assert.equal(route.getMapMarkers(), []);
     });
   </script>
 </head>
