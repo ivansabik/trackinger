@@ -1,6 +1,9 @@
+// trackinger - client
+// models.js
+
 function Route() {
   this.id = this._generateId();
-  this.status = null;
+  this.status = 'started';
   this.startedAt = null;
   if (startedAt === undefined) {
     this.startedAt = new Date().getTime();
@@ -8,14 +11,14 @@ function Route() {
     this.startedAt = timestamp;
   }
   this.geopoints = [];
-  this.getStart() = function() {}
-  this.addGeopoint() = function() {}
-  this.getDistance() = function() {}
-  this.getTime() = function() {}
-  this._generateId() = function() {}
-  this.getMapsPolyline() = function() {}
-  this.getMapsMarkers() = function() {}
-  this.save() = function() {}
+  this.getStart = function() {}
+  this.addGeopoint = function() {}
+  this.getDistance = function() {}
+  this.getTime = function() {}
+  this._generateId = function() {}
+  this.getMapsPolyline = function() {}
+  this.getMapsMarkers = function() {}
+  this.save = function() {}
 }
 
 function Geopoint(lat, lon, timestamp) {

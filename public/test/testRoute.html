@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>trackinger - client tests</title>
-  <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.18.0.css">
-  <script src="//code.jquery.com/qunit/qunit-1.18.0.js"></script> 
-  <script scr="../js/models.js"
+  <link rel="stylesheet" href="../modules/qunit/qunit-1.18.0.css">
+  <script src="../modules/qunit/qunit-1.18.0.js"></script>
+  <script src="../modules/geo_position_js_simulator/geo.js"></script>
+  <script src="../modules/geo_position_js_simulator/geo_position_js_simulator.js"></script>
+  <script src="../lib/models.js"></script>
   <script>
     QUnit.test('initial status is route started', function( assert ) {
       route = new Route();
@@ -14,20 +16,42 @@
     
     QUnit.test('ID is generated for new route', function( assert ) {
       route = new Route();
-      assert.equal(route.id, '');
+      assert.equal(route.id, true);
     });
     
     QUnit.test('started at is assigned', function( assert ) {
       route = new Route();
-      assert.equal(route.startedAt, '');
+      assert.equal(route.startedAt, true);
     });
     
     QUnit.test('adds Geopoint', function( assert ) {
       route = new Route();
       gp = new Geopoint();
       route.addPoint(gp);
-      assert.equal(route.geopoints[0], '');
+      assert.equal(route.geopoints[0], true);
     });
+    
+    QUnit.test('doesn\'nt add Geopoint if is the same as last', function( assert ) {
+      route = new Route();
+      gp = new Geopoint();
+      route.addPoint(gp);
+      assert.equal(route.geopoints[0], true);
+    });
+    
+    QUnit.test('doesn\'nt add Geopoint if has same latlon combination as last', function( assert ) {
+      route = new Route();
+      gp = new Geopoint();
+      route.addPoint(gp);
+      assert.equal(route.geopoints[0], true);
+    });
+    
+    QUnit.test('changes route satus after same location for longtime (automatic timeout)', function( assert ) {
+      route = new Route();
+      gp = new Geopoint();
+      route.addPoint(gp);
+      assert.equal(route.geopoints[0], true);
+    });
+    
     
     QUnit.test('calculates route distance', function( assert ) {
       route = new Route();

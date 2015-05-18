@@ -1,10 +1,16 @@
 function index() {
 }
 
+function trackRoute() {
+}
+
+function monitorRoute() {
+}
+
 function updateLocation() {
 }
 
-function startRoute() {
+function createRoute() {
 }
 
 function endRoute() {
